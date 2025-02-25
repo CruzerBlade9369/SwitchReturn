@@ -37,6 +37,9 @@
 	  <Reference Include="UnityEngine.CoreModule">
 	    <HintPath>..\..\..\..\..\Programs\Steam\steamapps\common\Derail Valley\DerailValley_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
 	  </Reference>
+	  <Reference Include="UnityEngine.IMGUIModule">
+	    <HintPath>..\..\..\..\..\Programs\Steam\steamapps\common\Derail Valley\DerailValley_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
