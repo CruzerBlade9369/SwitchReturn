@@ -56,6 +56,12 @@ namespace SwitchReturn
 					return;
 				}
 
+				var activeModeIndexField = AccessTools.Field(typeof(CommsRadioController), "activeModeIndex");
+				if (activeModeIndexField == null)
+				{
+					return;
+				}
+
 				var setModeMethod = AccessTools.Method(typeof(CommsRadioController), "SetMode");
 				if (setModeMethod == null)
 				{
@@ -64,10 +70,12 @@ namespace SwitchReturn
 
 				if (allRadioModes.Count > 0)
 				{
+					activeModeIndexField.SetValue(__instance, Main.settings.selectedModeIndex);
 					setModeMethod.Invoke(__instance, new object[] { allRadioModes[Main.settings.selectedModeIndex] });
 				}
 				else
 				{
+					activeModeIndexField.SetValue(__instance, 0);
 					setModeMethod.Invoke(__instance, new object[] { allRadioModes[0] });
 				}
 			}

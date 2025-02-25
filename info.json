@@ -1,6 +1,6 @@
 {
 	"Id": "SwitchReturn",
-	"Version": "1.1.0",
+	"Version": "1.1.1",
 	"DisplayName": "SwitchReturn",
 	"Author": "Cruzer",
 	"EntryMethod": "SwitchReturn.Main.Load",
